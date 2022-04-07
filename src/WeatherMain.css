@@ -49,6 +49,27 @@
   color: rgb(142, 142, 147);
 }
 
+.WeatherMain .temperature {
+  font-size: 64px;
+  font-weight: lighter;
+  line-height: 64px;
+}
+
+.WeatherMain .unit {
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+  margin-left: 5px;
+}
+
+.WeatherMain img {
+  height: 64px;
+  width: 64px;
+  margin: 0 5px 23px 0;
+}
+
 .WeatherMain h3 {
   font-size: 20px;
   font-weight: 100;
@@ -69,23 +90,15 @@
   text-align: right;
 }
 
-.WeatherMain img {
-  height: 64px;
-  width: 64px;
-  margin: 0 5px 23px 0;
+.WeatherMain .high-low-temps {
+  font-size: 20px;
 }
 
-.WeatherMain .temperature {
-  font-size: 64px;
-  font-weight: lighter;
-  line-height: 64px;
-}
-
-.WeatherMain .unit {
+.WeatherMain .feels-like {
+  color: rgb(159, 159, 190, 0.5);
   font-size: 16px;
-  font-weight: 400;
-  position: relative;
-  line-height: 1;
-  top: -34px;
-  margin-left: 5px;
+}
+
+.WeatherMain .feels-like-temp {
+  font-size: 30px;
 }

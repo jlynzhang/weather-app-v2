@@ -5,6 +5,8 @@ import "./WeatherMain.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons";
+import { faLongArrowAltDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function WeatherMain(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,9 +14,12 @@ export default function WeatherMain(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      temperature: response.data.main.temp,
-      humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
+      temperature: response.data.main.temp,
+      feelsLike: response.data.main.feels_like,
+      highTemp: response.data.main.temp_max,
+      lowTemp: response.data.main.temp_min,
+      humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       iconUrl: `https://ssl.gstatic.com/onebox/weather/64/cloudy.png`,
       wind: response.data.wind.speed,
@@ -43,12 +48,26 @@ export default function WeatherMain(props) {
               {Math.round(weatherData.temperature)}
             </span>
             <span className="unit">°F</span>
+            <h4>
+              <span className="feels-like">FEELS LIKE:</span>{" "}
+              <span className="feels-like-temp">
+                {Math.round(weatherData.feelsLike)}°
+              </span>
+            </h4>
           </div>
           <div className="col-6">
             <h3 className="text-capitalize">{weatherData.description}</h3>
             <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {Math.round(weatherData.wind)} mph</li>
+              <li className="high-low-temps">
+                H:{Math.round(weatherData.highTemp)}°{" "}
+                <FontAwesomeIcon icon={faLongArrowAltUp} />
+                <FontAwesomeIcon icon="fas fa-long-arrow-alt-up" /> L:
+                {Math.round(weatherData.lowTemp)}°{" "}
+                <FontAwesomeIcon icon={faLongArrowAltDown} />
+                <FontAwesomeIcon icon="fas fa-long-arrow-alt-down" />
+              </li>
+              <li>HUMIDITY: {weatherData.humidity}%</li>
+              <li>WIND: {Math.round(weatherData.wind)} mph</li>
             </ul>
           </div>
         </div>
