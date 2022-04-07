@@ -1,10 +1,29 @@
+body {
+  background: linear-gradient(
+    181deg,
+    rgb(2, 0, 97) 15%,
+    rgb(97, 149, 219) 158.5%
+  );
+  margin-bottom: 630px;
+}
+
 .App {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 100px auto;
+  padding: 25px;
+  background-color: rgba(44, 44, 46, 0.3);
+  border: 0.5px solid rgba(28, 28, 30, 0.3);
+  border-radius: 10px;
 }
 
 .App footer {
-    font-size: 11px;
-    margin: 10px 0;
-    text-align: center;
+  font-size: 11px;
+  margin: 10px 0;
+  text-align: center;
+  color: rgb(99, 99, 102);
+}
+
+.App footer a {
+  color: rgb(10, 132, 255);
+  text-decoration: none;
 }
