@@ -4,7 +4,7 @@ import WeatherMain from "./WeatherMain";
 export default function App() {
   return (
     <div className="App">
-      <WeatherMain />
+      <WeatherMain defaultCity="New York"/>
       <footer>
         Project coded by Jess Zhang and open-sourced on{" "}
         <a
