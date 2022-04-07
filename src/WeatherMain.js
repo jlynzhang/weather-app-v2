@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormatDate from "./FormatDate";
 import axios from "axios";
 import "./WeatherMain.css";
 
@@ -13,7 +14,7 @@ export default function WeatherMain(props) {
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Friday 6:00 PM",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconUrl: `https://ssl.gstatic.com/onebox/weather/64/cloudy.png`,
       wind: response.data.wind.speed,
@@ -32,7 +33,9 @@ export default function WeatherMain(props) {
           <input type="search" placeholder="Search for a city" autoFocus="on" />
         </form>
         <h1 className="mb-1">{weatherData.city}</h1>
-        <h2 className="mb-3">{weatherData.date}</h2>
+        <h2 className="mb-3">
+          <FormatDate date={weatherData.date} />
+        </h2>
         <div className="row">
           <div className="col-6">
             <img src={weatherData.iconUrl} alt={weatherData.description} />
@@ -44,7 +47,6 @@ export default function WeatherMain(props) {
           <div className="col-6">
             <h3 className="text-capitalize">{weatherData.description}</h3>
             <ul>
-              <li>Precipitation: 6%</li>
               <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {Math.round(weatherData.wind)} mph</li>
             </ul>
