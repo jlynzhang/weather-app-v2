@@ -5,6 +5,7 @@ import "./WeatherMain.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
 export default function WeatherMain(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -41,11 +42,23 @@ export default function WeatherMain(props) {
     setCity(event.target.value);
   }
 
+  function ForMyLocation(position) {
+    let apiKey = "0cd6606c8a21838ee3d658a5afde4449";
+    let apiUrl2 = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+
+    axios.get(`${apiUrl2}&appid=${apiKey}`).then(handleResponse);
+  }
+
+  function getLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(ForMyLocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="WeatherMain">
         <form onSubmit={handleSubmit}>
-          <button type="submit">
+          <button type="submit" className="search-btn">
             <FontAwesomeIcon icon={faSearch} />
             <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
           </button>
@@ -56,6 +69,12 @@ export default function WeatherMain(props) {
             onChange={handleCityChange}
           />
         </form>
+        <div className="nav-btn-center">
+          <button className="nav-btn" onClick={getLocation}>
+            <FontAwesomeIcon icon={faLocationArrow} />
+            <FontAwesomeIcon icon="fas fa-location-arrow" /> For My Location
+          </button>
+        </div>
         <WeatherInfo data={weatherData} />
       </div>
     );

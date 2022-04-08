@@ -39,5 +39,9 @@ export default function FormatDate() {
     }
   }
 
-  return <div>{formattedDate}</div>;
+  return (
+    <div>
+      <span className="last-updated">Last Updated:</span> {formattedDate}
+    </div>
+  );
 }

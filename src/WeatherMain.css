@@ -6,7 +6,7 @@
 }
 
 .WeatherMain form {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .WeatherMain input {
@@ -17,23 +17,37 @@
   background-color: rgba(82, 82, 92, 0.6);
   border: 0.5px solid rgb(126, 126, 148);
 }
-
 .WeatherMain ::placeholder {
   color: rgb(126, 126, 148);
   font-weight: lighter;
 }
-
 .WeatherMain input:focus {
   color: #fff;
 }
 
-.WeatherMain button {
+.WeatherMain .search-btn {
   border: none;
   background: transparent;
 }
-
 .WeatherMain .fa-magnifying-glass {
   color: rgb(172, 172, 201);
+}
+
+.WeatherMain .nav-btn-center {
+  text-align: center;
+}
+.WeatherMain .nav-btn {
+  color: rgb(126, 126, 148);
+  font-weight: lighter;
+  background-color: transparent;
+  border: 0.5px solid rgb(126, 126, 148);
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.WeatherMain .nav-btn:hover {
+  color: #fff;
+  border: 0.5px solid #fff;
+  transition: 200ms ease-in-out;
 }
 
 .WeatherMain h1 {
@@ -47,6 +61,9 @@
   font-size: 15px;
   font-weight: 100;
   color: rgb(142, 142, 147);
+}
+.WeatherMain .last-updated {
+  opacity: 0.7;
 }
 
 .WeatherMain .temperature {
