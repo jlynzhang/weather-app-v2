@@ -1,0 +1,76 @@
+.WeatherInfo h1 {
+  font-size: 30px;
+  font-weight: 100;
+  margin: 20px 0 0;
+  line-height: 29px;
+}
+
+.WeatherInfo h2 {
+  font-size: 15px;
+  font-weight: 100;
+  color: rgb(142, 142, 147);
+}
+.WeatherInfo .last-updated {
+  opacity: 0.7;
+}
+
+.WeatherInfo .temperature {
+  font-size: 64px;
+  font-weight: lighter;
+  line-height: 64px;
+}
+
+.WeatherInfo .unit {
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+  margin-left: 5px;
+}
+
+.WeatherInfo .svg-inline--fa.fa-up-long {
+  color: rgb(255, 69, 58);
+}
+.WeatherInfo .svg-inline--fa.fa-down-long {
+  color: rgb(10, 132, 255);
+}
+
+.WeatherInfo canvas {
+  margin-right: 5px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.WeatherInfo h3 {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: right;
+  color: rgb(159, 159, 190);
+}
+
+.WeatherInfo ul {
+  margin: 0;
+  padding: 0;
+}
+
+.WeatherInfo li {
+  font-size: 16px;
+  font-weight: 100px;
+  line-height: 23px;
+  list-style: none;
+  text-align: right;
+}
+
+.WeatherInfo .high-low-temps {
+  font-size: 20px;
+}
+
+.WeatherInfo .feels-like {
+  color: rgb(159, 159, 190, 0.5);
+  font-size: 16px;
+}
+
+.WeatherInfo .feels-like-temp {
+  font-size: 30px;
+}
