@@ -1,9 +1,11 @@
 import React from "react";
 import FormatDate from "./FormatDate";
+import WeatherIcons from "./WeatherIcons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons";
 import { faLongArrowAltDown } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function WeatherInfo(props) {
   return (
@@ -14,7 +16,7 @@ export default function WeatherInfo(props) {
       </h2>
       <div className="row">
         <div className="col-6">
-          <img src={props.data.iconUrl} alt={props.data.description} />
+          <WeatherIcons code={props.data.icon} />
           <span className="temperature">
             {Math.round(props.data.temperature)}
           </span>

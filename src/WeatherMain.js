@@ -21,7 +21,7 @@ export default function WeatherMain(props) {
       lowTemp: response.data.main.temp_min,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: `https://ssl.gstatic.com/onebox/weather/64/cloudy.png`,
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
     });

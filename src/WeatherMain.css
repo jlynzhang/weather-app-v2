@@ -80,10 +80,10 @@
   top: -34px;
 }
 
-.WeatherMain img {
-  height: 64px;
-  width: 64px;
-  margin: 0 5px 23px 0;
+.WeatherMain canvas {
+  margin-right: 5px;
+  margin-top: 5px;
+  display: inline-block;
 }
 
 .WeatherMain h3 {
