@@ -49,3 +49,7 @@
   border: 0.5px solid #fff;
   transition: 200ms ease-in-out;
 }
+
+.WeatherMain hr {
+  margin-top: 20px;
+}

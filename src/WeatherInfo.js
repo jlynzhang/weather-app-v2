@@ -16,8 +16,8 @@ export default function WeatherInfo(props) {
       </h2>
       <div className="row">
         <div className="col-6">
-            <WeatherIcons code={props.data.icon} />
-            <WeatherTemp fahrenheit={props.data.temperature} />
+          <WeatherIcons code={props.data.icon} size={50} />
+          <WeatherTemp fahrenheit={props.data.temperature} />
           <h4>
             <span className="feels-like">FEELS LIKE:</span>{" "}
             <span className="feels-like-temp">

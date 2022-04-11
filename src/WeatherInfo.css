@@ -14,6 +14,12 @@
   opacity: 0.7;
 }
 
+.WeatherInfo canvas {
+  margin-right: 5px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
 .WeatherInfo .temperature {
   font-size: 64px;
   font-weight: lighter;
@@ -29,17 +35,8 @@
   margin-left: 5px;
 }
 
-.WeatherInfo .svg-inline--fa.fa-up-long {
-  color: rgb(255, 69, 58);
-}
-.WeatherInfo .svg-inline--fa.fa-down-long {
+.WeatherInfo .inactive {
   color: rgb(10, 132, 255);
-}
-
-.WeatherInfo canvas {
-  margin-right: 5px;
-  margin-top: 5px;
-  display: inline-block;
 }
 
 .WeatherInfo h3 {
@@ -53,17 +50,26 @@
   margin: 0;
   padding: 0;
 }
-
 .WeatherInfo li {
   font-size: 16px;
   font-weight: 100px;
-  line-height: 23px;
+  line-height: 25px;
   list-style: none;
   text-align: right;
 }
 
 .WeatherInfo .high-low-temps {
   font-size: 20px;
+}
+.WeatherInfo .svg-inline--fa.fa-up-long {
+  color: rgb(255, 69, 58);
+}
+.WeatherInfo .svg-inline--fa.fa-down-long {
+  color: rgb(10, 132, 255);
+}
+
+.WeatherInfo h4 {
+  margin-top: 10px;
 }
 
 .WeatherInfo .feels-like {
